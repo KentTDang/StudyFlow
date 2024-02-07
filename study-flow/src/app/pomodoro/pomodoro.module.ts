@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    MatButtonModule
+    CommonModule
   ]
 })
-export class PomodoroModule { }
+export class PomodoroModule { 
+
+  workTime:number = 25;
+  seconds: number = 0;
+  isTimerActive: boolean = false;
+
+  startTimer() {
+    
+  }
+}
