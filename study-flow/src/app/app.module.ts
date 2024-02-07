@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PomodoroComponent } from './pomodoro/pomodoro.component';
-import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -14,8 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MatButtonModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
