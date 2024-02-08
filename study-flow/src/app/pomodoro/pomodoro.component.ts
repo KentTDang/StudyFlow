@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { timeInterval } from 'rxjs';
-// import { MatButtonModule } from '@angular/material/button';
 
 
 @Component({
   selector: 'app-pomodoro',
   templateUrl: './pomodoro.component.html',
-  styleUrls: ['./pomodoro.component.scss']
+  styleUrls: ['./pomodoro.component.scss'],
 })
 export class PomodoroComponent {
 
@@ -14,10 +13,12 @@ export class PomodoroComponent {
   seconds: number = 0;
 
   isTimerActive: boolean = false;
+  
 
 
   ngOnInit() {
-    console.log("HIT POMODORO TS")
+    console.log("HIT POMODORO TS");
+
   }
 
   startTime() {

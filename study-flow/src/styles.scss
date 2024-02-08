@@ -47,7 +47,7 @@ section{
     height: 100%;
 }
 
-.container{
+.pomodoro-container{
     width: min(42.5rem, 100%);
     margin-inline: auto;
     padding-inline: 2rem;
@@ -69,8 +69,9 @@ section{
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
     width: 30rem;
+    height: 4rem;
     margin-block: 5rem;
-    padding: 1rem;
+    // padding: 1rem;
     border-radius: 10rem;
     -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow);
     box-shadow: 0px 0px 15px 10px var(--color-shadow);
@@ -81,25 +82,68 @@ section{
     }
 }
 
-.panel button{
-    background-color: transparent;
-    color: var(--color-font);
-    border: none;
-}
+// .panel button{
+//     background-color: transparent;
+//     color: var(--color-font);
+//     border: none;
+// }
 
-.panel button.active{
-    opacity: 1;
-    color: var(--color-secondary);
-}
+// .panel button.active{
+//     opacity: 1;
+//     color: var(--color-secondary);
+// }
 
 .panel p {
     opacity: .8;
     transition: 1s ease-in;
 }
 
-.panel p.active {
+// .panel p.active {
+//     opacity: 1;
+//     color: var(--color-secondary);
+// }
+
+.mat-button-toggle-group {
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 30rem;
+    // height: 10rem;
+    // margin-block: 5rem;
+    padding: 1rem;
+
+}
+
+.mat-button-toggle {
+    background-color: transparent;
+    color: var(--color-font);
+    border: none;
+}
+
+.mat-button-toggle-button {
+    border: 0;
+    background: none;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    outline: none;
+    width: 90px;
+    cursor: pointer;
+}
+
+// Active Button
+
+.mat-button-toggle-checked.mat-button-toggle-appearance-standard{
     opacity: 1;
     color: var(--color-secondary);
+}
+
+.mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle {
+    border-left: none;
 }
 
 

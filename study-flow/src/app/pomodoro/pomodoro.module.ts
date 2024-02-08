@@ -1,19 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonToggleModule,
+    MatButtonModule
   ]
 })
-export class PomodoroModule { 
-
-  workTime:number = 25;
-  seconds: number = 0;
-  isTimerActive: boolean = false;
-
-  startTimer() {
-    
-  }
-}
+export class PomodoroModule { }
