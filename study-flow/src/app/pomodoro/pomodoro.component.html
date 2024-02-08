@@ -1,9 +1,9 @@
 <section>
     <div class="pomodor-container">
         <div class="panel">
-            <button mat-button id="work">Work</button>
-            <button mat-button id="break">Break</button>
-            <button mat-button id="long-break">Long Break</button>
+            <button mat-button id="work" (click)="startTime()">Work</button>
+            <button mat-button id="break" (click)="startBreak()">Break</button>
+            <button mat-button id="long-break" (click)="startLongBreak()">Long Break</button>
         </div>
         <div class="timer">
             <div class="timer-circle">
