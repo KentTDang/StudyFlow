@@ -4,7 +4,7 @@ import { PomodoroComponent } from './pomodoro/pomodoro.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 
 const routes: Routes = [
-  { path: '', component: SideNavComponent}
+  { path: '', component: PomodoroComponent}
 
 ];
 
