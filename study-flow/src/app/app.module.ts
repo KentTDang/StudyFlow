@@ -4,18 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PomodoroComponent } from './pomodoro/pomodoro.component';
-import { MatButtonModule } from '@angular/material/button';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PomodoroComponent
+    PomodoroComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MatButtonModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
