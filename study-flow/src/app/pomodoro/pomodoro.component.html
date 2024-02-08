@@ -1,16 +1,21 @@
 <section>
-    <div class="pomodor-container">
+    <div class="pomodoro-container">
+        <h1>Pomodoro</h1>
+        
         <div class="panel">
-            <button mat-button id="work" (click)="startWorkTime()">Work</button>
-            <button mat-button id="break" (click)="startBreak()">Break</button>
-            <button mat-button id="long-break" (click)="startLongBreak()">Long Break</button>
+            <mat-button-toggle-group name="timeInterval">
+                <mat-button-toggle value="work" (click)="startWorkTime()">Work</mat-button-toggle>
+                <mat-button-toggle value="break" (click)="startBreak()">Break</mat-button-toggle>
+                <mat-button-toggle value="long-break" (click)="startLongBreak()">Long Break</mat-button-toggle>
+            </mat-button-toggle-group>
         </div>
+
         <div class="timer">
             <div class="timer-circle">
                 <div class="time">
-                    <p id="minutes">25</p>
+                    <p id="minutes">{{workTime}}</p>
                     <p>:</p>
-                    <p id="seconds">00</p>
+                    <p id="seconds">{{seconds}}</p>
                 </div>
             </div>
         </div>
