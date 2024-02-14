@@ -2,10 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PomodoroComponent } from '../pomodoro/pomodoro.component';
+import { ToDoComponent } from '../to-do/to-do.component';
+import { SideNavComponent } from './side-nav.component';
 
 const routes: Routes = [
     {
-        path: '', component: PomodoroComponent
+        path: '', component: SideNavComponent,
+        children: [
+            {path: 'pomodoro', loadChildren: () => import('../pomodoro/pomodoro.module').then(x => x.PomodoroModule)},
+            {path: 'to-do', component: ToDoComponent}
+        ]
+        
+
     }
 ]
 
@@ -15,5 +23,4 @@ const routes: Routes = [
     ],
     exports: [RouterModule]
 })
-export class SideNavRouterModule { 
-}
+export class SideNavRouterModule { }

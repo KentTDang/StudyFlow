@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
+import { RouterModule, Routes } from '@angular/router';
+import { PomodoroComponent } from './pomodoro.component';
+
+const routes: Routes = [
+  {path: '', component: PomodoroComponent}
+];
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonToggleModule,
+    MatButtonModule,
+    RouterModule.forChild(routes)
   ]
 })
-export class PomodoroModule { 
-
-  workTime:number = 25;
-  seconds: number = 0;
-  isTimerActive: boolean = false;
-
-  startTimer() {
-    
-  }
-}
+export class PomodoroModule { }
