@@ -221,3 +221,14 @@ section{
 .controls #restart {
     display: none;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* === Side Nav === */
+.app-page{
+    display: flex;
+    
+}
+.side-nav{
+    width: 20%;
+}
