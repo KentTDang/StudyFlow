@@ -9,8 +9,9 @@ const routes: Routes = [
     {
         path: '', component: SideNavComponent,
         children: [
+            {path: '', loadChildren: () => import('../pomodoro/pomodoro.module').then(x => x.PomodoroModule)},
             {path: 'pomodoro', loadChildren: () => import('../pomodoro/pomodoro.module').then(x => x.PomodoroModule)},
-            {path: 'to-do', component: ToDoComponent}
+            {path: 'to-do', loadChildren: () => import('../to-do/to-do.module').then(x => x.ToDoModule)}
         ]
         
 
