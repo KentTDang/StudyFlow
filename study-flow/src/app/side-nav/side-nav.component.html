@@ -1,8 +1,30 @@
 <div class="app-page">
     <div class="side-nav">
         <h1>Side Nav</h1>
+        <div class="toggle-nav" (click)="toggleSideNav($event)" [ngStyle]="{ 'width': isExpanded ? '0px' : '67px' }">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="toggle">
+                <div class="bars" id="bar1"></div>
+                <div class="bars" id="bar2"></div>
+                <div class="bars" id="bar3"></div>
+            </label>
+        </div>
+            <mat-nav-list class="navigation">
+                <ul>
+                    <li>
+                        <a mat-list-item routerLink="/study-flow/pomodoro">
+                            <span class="nav-pomodoro">Pomodoro</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a mat-list-item routerLink="/study-flow/to-do">
+                            <span>To-Do</span>
+                        </a>
+                    </li>
+                </ul>
+            </mat-nav-list>
     </div>
-    <div class="main-content">
+    <div class="main-content" [ngStyle]="{ 'margin-left': isExpanded ? '100px' : '8px' }">
         <router-outlet></router-outlet>
     </div>
 </div>

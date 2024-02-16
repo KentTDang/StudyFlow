@@ -8,6 +8,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { ToDoComponent } from './to-do/to-do.component';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ToDoComponent } from './to-do/to-do.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
