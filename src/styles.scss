@@ -224,6 +224,10 @@ section{
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    width: 9rem;
+}
+
 /* === Side Nav === */
 .app-page{
     display: flex;
