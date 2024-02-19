@@ -13,8 +13,6 @@ export class PomodoroComponent {
   seconds: number = 0;
 
   isTimerActive: boolean = false;
-  
-
 
   ngOnInit() {
     console.log("HIT POMODORO TS");
@@ -22,30 +20,27 @@ export class PomodoroComponent {
   }
 
   startTime() {
-    console.log("Start Time Function");
 
     this.isTimerActive = true;
-    this.seconds = 59;
-    this.minutes = this.minutes -1;
 
+    this.seconds = 59;
+    this.minutes--;
 
     let timerFunction = () => {
-      // console.log(currentMinutes + ":" + currentSeconds);
-      // console.log("Active Status: " + this.isTimerActive);
-
       if (this.isTimerActive) {
-        this.seconds = this.seconds - 1;
-        if (this.seconds < 0) {
-          this.minutes = this.minutes - 1;
-          this.seconds = 59;
-          if (this.minutes < 0) {
+        if (this.seconds === 0) {
+          if (this.minutes === 0) {
             clearInterval(timeIntervalId);
+            return;
           }
+          this.minutes--;
+          this.seconds = 59;
+        } else {
+          this.seconds--;
         }
       } else {
-        // If the Timer is not active, Reset the time
         clearInterval(timeIntervalId);
-        console.log("Else statement in pomo HIT")
+        console.log("Timer stopped");
       }
     }
 
@@ -53,7 +48,7 @@ export class PomodoroComponent {
 
   }
 
-  startWorkTime(){
+  startWorkTime() {
     this.isTimerActive = false;
     this.minutes = 1;
     this.seconds = 0;
