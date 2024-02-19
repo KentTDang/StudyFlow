@@ -9,7 +9,7 @@ import { timeInterval } from 'rxjs';
 })
 export class PomodoroComponent {
 
-  workTime: number = 25;
+  minutes: number = 25;
   seconds: number = 0;
 
   isTimerActive: boolean = false;
@@ -26,20 +26,19 @@ export class PomodoroComponent {
 
     this.isTimerActive = true;
     this.seconds = 59;
+    this.minutes = this.minutes -1;
 
-    let currentMinutes = this.workTime - 1;
-    let currentSeconds = this.seconds;
 
     let timerFunction = () => {
-      console.log(currentMinutes + ":" + currentSeconds);
-      console.log("Active Status: " + this.isTimerActive);
+      // console.log(currentMinutes + ":" + currentSeconds);
+      // console.log("Active Status: " + this.isTimerActive);
 
       if (this.isTimerActive) {
-        currentSeconds = currentSeconds - 1;
-        if (currentSeconds < 0) {
-          currentMinutes = currentMinutes - 1;
-          currentSeconds = 59;
-          if (currentMinutes < 0) {
+        this.seconds = this.seconds - 1;
+        if (this.seconds < 0) {
+          this.minutes = this.minutes - 1;
+          this.seconds = 59;
+          if (this.minutes < 0) {
             clearInterval(timeIntervalId);
           }
         }
@@ -56,16 +55,19 @@ export class PomodoroComponent {
 
   startWorkTime(){
     this.isTimerActive = false;
-    this.workTime = 25;
+    this.minutes = 1;
+    this.seconds = 0;
   }
 
   startBreak() {
     this.isTimerActive = false;
-    this.workTime = 5;
+    this.minutes = 5;
+    this.seconds = 0;
   }
 
   startLongBreak() {
     this.isTimerActive = false;
-    this.workTime = 10;
+    this.minutes = 10;
+    this.seconds = 0;
   }
 }
