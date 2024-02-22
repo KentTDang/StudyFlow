@@ -13,9 +13,9 @@
         <div class="timer">
             <div class="timer-circle">
                 <div class="time">
-                    <p id="minutes">{{minutes}}</p>
+                    <p id="minutes">{{minutes | number: '2.0-0'}}</p>
                     <p>:</p>
-                    <p id="seconds">{{seconds}}</p>
+                    <p id="seconds">{{seconds | number: '2.0-0'}}</p>
                 </div>
             </div>
         </div>
