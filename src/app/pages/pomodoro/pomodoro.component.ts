@@ -11,26 +11,28 @@ export class PomodoroComponent {
 
   minutes: number = 25;
   seconds: number = 0;
+  selectedBtnValue: string = '';
 
   isTimerActive: boolean = false;
+  timeIntervalId: any;
 
   ngOnInit() {
     console.log("HIT POMODORO TS");
+    this.selectedBtnValue = 'work';
 
   }
 
+  onSelectedBtnValueChange(val:string){
+    this.selectedBtnValue = val;
+  }
+
   startTime() {
-
     this.isTimerActive = true;
-
-    this.seconds = 59;
-    this.minutes--;
-
-    let timerFunction = () => {
+    this.timeIntervalId = setInterval(() => {
       if (this.isTimerActive) {
         if (this.seconds === 0) {
           if (this.minutes === 0) {
-            clearInterval(timeIntervalId);
+            clearInterval(this.timeIntervalId);
             return;
           }
           this.minutes--;
@@ -39,13 +41,10 @@ export class PomodoroComponent {
           this.seconds--;
         }
       } else {
-        clearInterval(timeIntervalId);
+        clearInterval(this.timeIntervalId);
         console.log("Timer stopped");
       }
-    }
-
-    var timeIntervalId = setInterval(timerFunction, 1000);
-
+    }, 1000);
   }
 
   startWorkTime() {
@@ -64,5 +63,13 @@ export class PomodoroComponent {
     this.isTimerActive = false;
     this.minutes = 10;
     this.seconds = 0;
+  }
+
+  restartTime(){
+    clearInterval(this.timeIntervalId);
+  }
+
+  PauseTime(){
+    clearInterval(this.timeIntervalId);
   }
 }
