@@ -21,10 +21,8 @@
         </div>
     
         <div class="controls">
-            <button mat-button id="start" (click)="startTime()">Start</button>
-            <br>
+            <button mat-button id="start" [disabled]="isTimerActive" (click)="startTime()">Start</button>
             <button mat-button  (click)="restartTime()">Restart</button>
-            <br>
             <button mat-button  (click)="PauseTime()">Pause</button>
         </div>
     

@@ -49,7 +49,7 @@ export class PomodoroComponent {
 
   startWorkTime() {
     this.isTimerActive = false;
-    this.minutes = 1;
+    this.minutes = 25;
     this.seconds = 0;
   }
 
