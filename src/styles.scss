@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-    --color-primary: hsl(235, 35%, 19%);
-    --color-secondary: hsl(358, 78%, 69%);
-    --color-font: #black;
+    --color-primary: hsl(235, 35%, 19%); // Not in use
+    --color-secondary: #4fc1e9; // Not in Use
+    --color-font: #191919E6;
     --color-shadow: hsl(0, 0%, 90%);
     --color-white: #f9f9f9;
 
@@ -23,149 +23,7 @@ html,
 body {
     height: 100%;
     background-color: var(--color-white);
-}
-
-/* === CONTENT ==== */
-
-section {
-    // display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.pomodoro-container {
-    width: min(42.5rem, 100%);
-    margin-inline: auto;
-    padding-inline: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    p {
-        opacity: .8;
-        transition: 1s ease-in;
-    }
-
-    h1{
-        padding-top: 1.8rem;
-        font-size: 6rem;
-    }
-}
-
-/* === PANEL === */
-
-.panel {
-    margin-block: 2rem;
-}
-
-.panel p {
-    opacity: .8;
-    transition: 1s ease-in;
-}
-
-.mat-button-toggle-group {
-    justify-content: center;
-    align-items: center;
-    border: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 30rem;
-    padding: 1rem;
-    padding-bottom: 2rem;
-
-}
-
-.mat-button-toggle {
-    background-color: transparent;
-    color: var(--color-font);
-    border: none;
-    font-size: 16px;
-}
-
-.mat-button-toggle-button {
-    border: 0;
-    background: none;
-    color: inherit;
-    padding: 0;
-    margin: 0;
-    font: inherit;
-    outline: none;
-    width: 90px;
-    cursor: pointer;
-}
-
-// Active Button
-
-.mat-button-toggle-checked.mat-button-toggle-appearance-standard {
-    opacity: 1;
-    color: #4fc1e9;
-}
-
-.mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle {
-    border-left: none;
-}
-
-
-/* === TIMER === */
-
-.time {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 32px;
-}
-
-.timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30rem;
-    height: 30rem;
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow);
-    box-shadow: 0px 0px 15px 10px var(--color-shadow);
-
-    p{
-        opacity: .8;
-        transition: 1s ease-in;
-    }
-}
-
-.timer-circle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 26rem;
-    height: 26rem;
-    border-radius: 50%;
-    background-color: #4fc1e9;
-    position: relative;
-}
-
-.timer-circle::before{
-    content: '';
-    position: absolute;
-    width: 95%;
-    height: 95%;
-    border-radius: 50%;
-    background-color: var(--color-white);
-}
-
-
-.time p {
-    font-size: 8rem;
-}
-
-.time p:nth-of-type(2) {
-    position: relative;
-    top: -.5rem;
-    margin-inline: 1rem;
-}
-
-.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
-    width: 6rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* === Side Nav === */
@@ -191,7 +49,6 @@ section {
     padding: 20px;
     width: 82%;
     height: 100%;
-    // margin-left: 100px;
 }
 
 #checkbox {
@@ -255,5 +112,4 @@ section {
 
 .nav-pomodoro {
     color: #fff;
-    // margin-left: 25px
 }
