@@ -67,9 +67,11 @@ export class PomodoroComponent {
 
   restartTime(){
     clearInterval(this.timeIntervalId);
+    this.isTimerActive = false;
   }
 
   PauseTime(){
     clearInterval(this.timeIntervalId);
+    this.isTimerActive = false;
   }
 }
