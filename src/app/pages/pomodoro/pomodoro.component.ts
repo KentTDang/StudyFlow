@@ -16,7 +16,6 @@ export class PomodoroComponent {
   isTimerActive: boolean = false;
   timeIntervalId: any;
 
-  private feedbackConfig = new MatDialogConfig();
 
   ngOnInit() {
     console.log("HIT POMODORO TS");
@@ -84,4 +83,5 @@ export class PomodoroComponent {
   informationDialog() {
     var ref = this._dialog.open();
 
+  }
 }
