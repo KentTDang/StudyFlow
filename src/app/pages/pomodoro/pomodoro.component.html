@@ -1,9 +1,16 @@
 <section>
+    <div class="header-content">
+        <h1>Kent</h1>
+        <div class="header-panel">
+            <button (click)="feedback()">Feedback</button>
+            <button>About Me</button>
+        </div>
+    </div>
     <div class="pomodoro-container">
         <h1>Pomodoro</h1>
-        
         <div class="panel">
-            <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectedBtnValue" (change)="onSelectedBtnValueChange(group.value)">
+            <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectedBtnValue"
+                (change)="onSelectedBtnValueChange(group.value)">
                 <mat-button-toggle value="work" (click)="startWorkTime()">Work</mat-button-toggle>
                 <mat-button-toggle value="break" (click)="startBreak()">Break</mat-button-toggle>
                 <mat-button-toggle value="long-break" (click)="startLongBreak()">Long Break</mat-button-toggle>
@@ -19,16 +26,18 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="controls">
-            <button mat-button id="start" [disabled]="isTimerActive" (click)="startTime()">Start</button>
-            <button mat-button  (click)="restartTime()">Restart</button>
-            <button mat-button  (click)="PauseTime()">Pause</button>
+            <button mat-button class="start-btn" id="start" [disabled]="isTimerActive"
+                (click)="startTime()">Start</button>
+            <button mat-button class="restart-btn" (click)="restartTime()">Restart</button>
+            <button mat-button class="pause-btn" (click)="PauseTime()">Pause</button>
         </div>
-    
+
+
         <div class="theme-btn">
-    
+
         </div>
-    
+
     </div>
 </section>

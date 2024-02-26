@@ -4,8 +4,8 @@ import { PomodoroComponent } from './pages/pomodoro/pomodoro.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 
 const routes: Routes = [
-  // { path: '', component: PomodoroComponent},
-  { path: '', loadChildren: () => import('./side-nav/side-nav.router.module').then(x => x.SideNavRouterModule)},
+  { path: '', component: PomodoroComponent},
+  // { path: '', loadChildren: () => import('./side-nav/side-nav.router.module').then(x => x.SideNavRouterModule)},
   { path: 'study-flow', loadChildren: () => import('./side-nav/side-nav.router.module').then(x => x.SideNavRouterModule)}
 
 ];
