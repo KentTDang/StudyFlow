@@ -74,4 +74,8 @@ export class PomodoroComponent {
     clearInterval(this.timeIntervalId);
     this.isTimerActive = false;
   }
+
+  informationDialog(){
+    
+  }
 }

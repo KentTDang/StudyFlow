@@ -9,7 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { ToDoComponent } from './pages/to-do/to-do.component';
 import { MatListModule } from '@angular/material/list';
-import { InformationComponent } from './pages/information/information.component';
+import {MatDialogModule} from '@angular/material/dialog'; 
+import { InfoDialogComponent } from './pages/info-dialog/info-dialog.component';
 
 
 @NgModule({
@@ -18,13 +19,14 @@ import { InformationComponent } from './pages/information/information.component'
     PomodoroComponent,
     SideNavComponent,
     ToDoComponent,
-    InformationComponent
+    InfoDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonToggleModule,
+    MatDialogModule, 
     MatListModule
   ],
   providers: [],
