@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { ToDoComponent } from './pages/to-do/to-do.component';
 import { MatListModule } from '@angular/material/list';
+import { InformationComponent } from './pages/information/information.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MatListModule } from '@angular/material/list';
     AppComponent,
     PomodoroComponent,
     SideNavComponent,
-    ToDoComponent
+    ToDoComponent,
+    InformationComponent
   ],
   imports: [
     BrowserModule,
