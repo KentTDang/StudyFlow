@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { timeInterval } from 'rxjs';
 import { DialogService } from 'src/app/dialog.service';
 
-
 @Component({
   selector: 'app-pomodoro',
   templateUrl: './pomodoro.component.html',
@@ -16,6 +15,8 @@ export class PomodoroComponent {
 
   isTimerActive: boolean = false;
   timeIntervalId: any;
+
+  private feedbackConfig = new MatDialogConfig();
 
   ngOnInit() {
     console.log("HIT POMODORO TS");
@@ -82,5 +83,5 @@ export class PomodoroComponent {
 
   informationDialog() {
     var ref = this._dialog.open();
-  }
+
 }
