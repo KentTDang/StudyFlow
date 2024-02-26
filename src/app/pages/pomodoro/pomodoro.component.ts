@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { timeInterval } from 'rxjs';
+import { DialogService } from 'src/app/dialog.service';
 
 
 @Component({
@@ -22,7 +23,11 @@ export class PomodoroComponent {
 
   }
 
-  onSelectedBtnValueChange(val:string){
+  constructor(private _dialog: DialogService) {
+
+  }
+
+  onSelectedBtnValueChange(val: string) {
     this.selectedBtnValue = val;
   }
 
@@ -65,17 +70,17 @@ export class PomodoroComponent {
     this.seconds = 0;
   }
 
-  restartTime(){
+  restartTime() {
     clearInterval(this.timeIntervalId);
     this.isTimerActive = false;
   }
 
-  PauseTime(){
+  PauseTime() {
     clearInterval(this.timeIntervalId);
     this.isTimerActive = false;
   }
 
-  informationDialog(){
-    
+  informationDialog() {
+    var ref = this._dialog.open();
   }
 }
