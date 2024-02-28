@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { timeInterval } from 'rxjs';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-
+import { DialogService } from 'src/app/dialog.service';
 
 @Component({
   selector: 'app-pomodoro',
@@ -17,7 +16,6 @@ export class PomodoroComponent {
   isTimerActive: boolean = false;
   timeIntervalId: any;
 
-  private feedbackConfig = new MatDialogConfig();
 
   ngOnInit() {
     console.log("HIT POMODORO TS");
@@ -25,7 +23,9 @@ export class PomodoroComponent {
 
   }
 
-  onSelectedBtnValueChange(val:string){
+  constructor(private infoDialog: DialogService, private fbDialog: DialogService) {}
+
+  onSelectedBtnValueChange(val: string) {
     this.selectedBtnValue = val;
   }
 
@@ -68,17 +68,21 @@ export class PomodoroComponent {
     this.seconds = 0;
   }
 
-  restartTime(){
+  restartTime() {
     clearInterval(this.timeIntervalId);
     this.isTimerActive = false;
   }
 
-  PauseTime(){
+  PauseTime() {
     clearInterval(this.timeIntervalId);
     this.isTimerActive = false;
   }
 
-  feedback(){
-    const dialogRef = this.dialog.open(FeedbackComponent)
+  informationDialog() {
+    var ref = this.infoDialog.open("info");
+  }
+
+  feedbackDialog() {
+    var ref = this.fbDialog.open("feedback");
   }
 }
