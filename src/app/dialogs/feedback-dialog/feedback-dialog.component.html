@@ -1,9 +1,30 @@
-<h1 mat-dialog-title>Feedback</h1>
+<div class="dialog-header">
+    <h1 mat-dialog-title>Feedback</h1>
+
+    <mat-dialog-actions>
+        <button class="close-dialog" mat-button mat-dialog-close>
+            <span class="X"></span>
+            <span class="Y"></span>
+        </button>
+    </mat-dialog-actions>
+</div>
+
+
 <mat-dialog-content>
-  StudyFlow is here to help you manage your time. Inspired by the Pomodoro Technique
-  by Francesco Cirillo, StudyFlow allows you to focus your work in 25 minute increments, with short 5 minute breaks
-  in-between.
+    <div class="feedback-form">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="99561fa0-f56e-4845-8e2d-838ab6bda459">
+            <div class="input-control i-c-2">
+                <input type="text" name="name" placeholder="YOUR NAME" required>
+                <input type="email" name="email" placeholder="YOUR EMAIL" required>
+            </div>
+            <div class="input-control">
+                <textarea name="message" placeholder="Message Here..." required></textarea>
+            </div>
+            <button type="submit" class="contact-btn">Submit <img src="" alt=""></button>
+        </form>
+
+    </div>
+
+
 </mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button mat-dialog-close>Close</button>
-</mat-dialog-actions>
