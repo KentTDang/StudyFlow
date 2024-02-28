@@ -82,6 +82,5 @@ export class PomodoroComponent {
 
   informationDialog() {
     var ref = this._dialog.open();
-
   }
 }
