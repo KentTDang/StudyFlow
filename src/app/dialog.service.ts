@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { InfoDialogComponent } from './dialogs/info-dialog/info-dialog.component';
+import { FeedbackDialogComponent } from './dialogs/feedback-dialog/feedback-dialog.component';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,17 @@ import { InfoDialogComponent } from './dialogs/info-dialog/info-dialog.component
 export class DialogService {
 
   constructor(private dialog: MatDialog) { }
-  open(){
-    return this.dialog.open(InfoDialogComponent);
+
+  open(dialogComponent : string) {
+    if(dialogComponent == "info"){
+      return this.dialog.open(InfoDialogComponent);
+    }
+    else if(dialogComponent == "feedback"){
+      return this.dialog.open(FeedbackDialogComponent);
+    }
+    else{
+      return;
+    }
+    
   }
 }

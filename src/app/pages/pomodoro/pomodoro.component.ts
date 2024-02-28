@@ -23,9 +23,7 @@ export class PomodoroComponent {
 
   }
 
-  constructor(private _dialog: DialogService) {
-
-  }
+  constructor(private infoDialog: DialogService, private fbDialog: DialogService) {}
 
   onSelectedBtnValueChange(val: string) {
     this.selectedBtnValue = val;
@@ -81,6 +79,10 @@ export class PomodoroComponent {
   }
 
   informationDialog() {
-    var ref = this._dialog.open();
+    var ref = this.infoDialog.open("info");
+  }
+
+  feedbackDialog() {
+    var ref = this.fbDialog.open("feedback");
   }
 }
