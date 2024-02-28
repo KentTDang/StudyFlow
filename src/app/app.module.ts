@@ -10,7 +10,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { ToDoComponent } from './pages/to-do/to-do.component';
 import { MatListModule } from '@angular/material/list';
 import {MatDialogModule} from '@angular/material/dialog'; 
-import { InfoDialogComponent } from './pages/info-dialog/info-dialog.component';
+import { InfoDialogComponent } from './dialogs/info-dialog/info-dialog.component';
 
 
 @NgModule({
