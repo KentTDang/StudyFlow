@@ -1,0 +1,41 @@
+.input-info {
+    input {
+        border-radius: 30px;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        padding: .8rem 1.1rem;
+        outline: none;
+        width: 15rem;
+        resize: none;
+        margin-right: 5px;
+    }
+}
+
+.input-message {
+    margin: 1.5rem 0;
+    input,
+    textarea {
+        border-radius: 30px;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        padding: .8rem 1.1rem;
+        outline: none;
+        width: 30rem;
+        resize: none;
+    }
+
+    textarea {
+        height: 10rem;
+    }
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 30px;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+}
