@@ -16,14 +16,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    // font-family: 'Poppins', sans-serif;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 html,
 body {
     height: 100%;
     background-color: var(--color-white);
-    font-family: 'Poppins', sans-serif;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    font-family: "Work Sans", sans-serif; 
 }
 
 .dialog-header{
