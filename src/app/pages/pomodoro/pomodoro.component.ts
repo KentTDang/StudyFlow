@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { timeInterval } from 'rxjs';
-import { DialogService } from 'src/app/dialog.service';
+import { DialogService } from 'src/app/services/dialog-services/dialog.service';
 
 @Component({
   selector: 'app-pomodoro',
