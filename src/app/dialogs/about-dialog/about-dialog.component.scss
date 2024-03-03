@@ -1,0 +1,10 @@
+.dialog-header { 
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "Work Sans", sans-serif;
+    }
+}

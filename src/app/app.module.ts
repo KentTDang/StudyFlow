@@ -12,6 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import {MatDialogModule} from '@angular/material/dialog'; 
 import { InfoDialogComponent } from './dialogs/info-dialog/info-dialog.component';
 import { FeedbackDialogComponent } from './dialogs/feedback-dialog/feedback-dialog.component';
+import { AboutDialogComponent } from './dialogs/about-dialog/about-dialog.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FeedbackDialogComponent } from './dialogs/feedback-dialog/feedback-dial
     SideNavComponent,
     ToDoComponent,
     InfoDialogComponent,
-    FeedbackDialogComponent
+    FeedbackDialogComponent,
+    AboutDialogComponent
   ],
   imports: [
     BrowserModule,
