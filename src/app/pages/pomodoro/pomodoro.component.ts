@@ -85,4 +85,8 @@ export class PomodoroComponent {
   feedbackDialog() {
     var ref = this.fbDialog.open("feedback");
   }
+
+  aboutDialog() {
+    var ref = this.fbDialog.open("about-me");
+  }
 }
