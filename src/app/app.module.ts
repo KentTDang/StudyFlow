@@ -13,6 +13,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { InfoDialogComponent } from './dialogs/info-dialog/info-dialog.component';
 import { FeedbackDialogComponent } from './dialogs/feedback-dialog/feedback-dialog.component';
 import { AboutDialogComponent } from './dialogs/about-dialog/about-dialog.component';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { AboutDialogComponent } from './dialogs/about-dialog/about-dialog.compon
     BrowserAnimationsModule,
     MatButtonToggleModule,
     MatDialogModule, 
-    MatListModule
+    MatListModule,
+    MatIconModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
