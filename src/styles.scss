@@ -124,5 +124,6 @@ body {
 
 .submit-btn {
     @extend .elevate-button;
+    margin-left: 0px;
     background-color: var(--color-font);
 }

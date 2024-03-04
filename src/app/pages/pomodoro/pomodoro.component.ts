@@ -16,6 +16,9 @@ export class PomodoroComponent {
   isTimerActive: boolean = false;
   timeIntervalId: any;
 
+  resetMinutesTo: number = 25;
+  resetSecondsTo: number = 0;
+
 
   ngOnInit() {
     console.log("HIT POMODORO TS");
@@ -54,23 +57,33 @@ export class PomodoroComponent {
     this.isTimerActive = false;
     this.minutes = 25;
     this.seconds = 0;
+    this.setResetTime(25 , 0);
   }
 
   startBreak() {
     this.isTimerActive = false;
     this.minutes = 5;
     this.seconds = 0;
+    this.setResetTime(5 , 0);
   }
 
   startLongBreak() {
     this.isTimerActive = false;
     this.minutes = 10;
     this.seconds = 0;
+    this.setResetTime(10 , 0);
   }
 
   restartTime() {
     clearInterval(this.timeIntervalId);
     this.isTimerActive = false;
+    this.minutes = this.resetMinutesTo;
+    this.seconds = this.resetSecondsTo;
+  }
+
+  setResetTime(min : number, sec : number) {
+    this.resetMinutesTo = min;
+    this.resetSecondsTo = sec;
   }
 
   PauseTime() {
