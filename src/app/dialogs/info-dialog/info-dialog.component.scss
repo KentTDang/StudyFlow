@@ -1,0 +1,20 @@
+.dialog-header { 
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "Work Sans", sans-serif;
+    }
+}
+
+.info-text {
+    padding-top: 6px;
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--color-font);
+        font-family: "Work Sans", sans-serif;
+    }
+}

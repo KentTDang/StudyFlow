@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { timeInterval } from 'rxjs';
-import { DialogService } from 'src/app/dialog.service';
+import { DialogService } from 'src/app/services/dialog-services/dialog.service';
 
 @Component({
   selector: 'app-pomodoro',
@@ -15,6 +15,9 @@ export class PomodoroComponent {
 
   isTimerActive: boolean = false;
   timeIntervalId: any;
+
+  resetMinutesTo: number = 25;
+  resetSecondsTo: number = 0;
 
 
   ngOnInit() {
@@ -54,23 +57,33 @@ export class PomodoroComponent {
     this.isTimerActive = false;
     this.minutes = 25;
     this.seconds = 0;
+    this.setResetTime(25 , 0);
   }
 
   startBreak() {
     this.isTimerActive = false;
     this.minutes = 5;
     this.seconds = 0;
+    this.setResetTime(5 , 0);
   }
 
   startLongBreak() {
     this.isTimerActive = false;
     this.minutes = 10;
     this.seconds = 0;
+    this.setResetTime(10 , 0);
   }
 
   restartTime() {
     clearInterval(this.timeIntervalId);
     this.isTimerActive = false;
+    this.minutes = this.resetMinutesTo;
+    this.seconds = this.resetSecondsTo;
+  }
+
+  setResetTime(min : number, sec : number) {
+    this.resetMinutesTo = min;
+    this.resetSecondsTo = sec;
   }
 
   PauseTime() {
@@ -84,5 +97,9 @@ export class PomodoroComponent {
 
   feedbackDialog() {
     var ref = this.fbDialog.open("feedback");
+  }
+
+  aboutDialog() {
+    var ref = this.fbDialog.open("about-me");
   }
 }

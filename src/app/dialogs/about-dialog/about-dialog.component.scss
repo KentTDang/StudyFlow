@@ -1,0 +1,41 @@
+
+.dialog-header {
+    height: fit-content;
+    display: flex;
+    justify-content: end;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "Work Sans", sans-serif;
+    }
+}
+
+.dialog-sub-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image-circle img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.info-text {
+    padding-top: 6px;
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--color-font);
+        font-family: "Work Sans", sans-serif;
+    }
+}

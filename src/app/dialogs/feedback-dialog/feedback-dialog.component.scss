@@ -1,0 +1,75 @@
+h3 {
+    font-weight: 700;
+    color: var(--color-font);
+}
+
+.dialog-header { 
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "Work Sans", sans-serif;
+    }
+}
+
+.dialog-sub-header {
+    display: flex;
+    padding: 20px 24px 0px 24px;
+
+    h3 {
+        font-weight: 300;
+    }
+}
+
+.input-info-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.input-info {
+    input {
+        border-radius: 10px;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        padding: .8rem 1.1rem;
+        outline: none;
+        width: 15rem;
+        resize: none;
+        margin-right: 5px;
+        border-width: thin;
+    }
+}
+
+.input-message {
+    margin: 1.5rem 0;
+    input,
+    textarea {
+        border-radius: 10px;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        padding: .8rem 1.1rem;
+        outline: none;
+        width: 30rem;
+        resize: none;
+    }
+
+    textarea {
+        height: 10rem;
+    }
+}
+
+.mdc-dialog .mdc-dialog_content {
+    padding: 0px 24px 20px 24px;
+}
+
+.feedback-form {
+    top: 0px;
+}
+
+.mat-mdc-dialog-actions {
+    min-height: 0px;
+}
