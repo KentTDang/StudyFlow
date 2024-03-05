@@ -40,3 +40,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# API Keys
+src/app/environment.ts
+src/app/dialogs/feedback-dialog/feedback-dialog.component.html
