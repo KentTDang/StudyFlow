@@ -17,8 +17,8 @@
 
     <div class="feedback-form">
         <mat-dialog-content>
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                <input type="hidden" name="access_key" value="99561fa0-f56e-4845-8e2d-838ab6bda459">
+            <form action={{apiUrl}} method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value={{apiKey}}>
                 <div class="input-info">
                     <div class="input-info-header">
                         <h3>Name</h3>
